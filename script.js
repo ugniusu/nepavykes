@@ -14,14 +14,4 @@ function findWord() {
   const plainText = text.replace(/<span class="highlight">|<\/span>/gi, "");
 
   const words = plainText.split(" ");
-
-  let boldText = "";
-  words.forEach((el) => {
-    if (el.toLowerCase().includes(word)) {
-      boldText += `<span class="highlight">${el}</span> `;
-    } else {
-      boldText += `${el}`;
-    }
-  });
-  result.innerHTML = boldText;
 }
